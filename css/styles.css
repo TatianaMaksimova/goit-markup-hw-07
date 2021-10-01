@@ -40,7 +40,6 @@ p {
   padding-bottom: 94px;
 }
 
-/* -----------------------HEADER------------------------ */
 .container {
   width: 1200px;
   padding-left: 15px;
@@ -49,26 +48,29 @@ p {
   margin-right: auto;
 }
 
+/* -----------------------HEADER------------------------ */
 .page-header {
   border-bottom: 1px solid #ececec;
 }
 
-.cap,
-.site-nav {
+.page-header__container,
+.site-nav,
+.site-nav__list {
   display: flex;
   align-items: center;
 }
 
-.list {
+.page-header__list {
   display: flex;
   margin-left: auto;
 }
 
-.list-item:not(:last-child) {
+.site-nav__item:not(:last-child),
+.page-header__item:not(:last-child) {
   margin-right: 50px;
 }
 
-.logo {
+.site-nav__logo {
   display: block;
   padding-top: 24px;
   padding-bottom: 25px;
@@ -81,16 +83,16 @@ p {
   text-decoration: none;
 }
 
-.accent,
-.link.main {
+.site-nav__accent,
+.site-nav__link--active {
   color: var(--accent-color);
 }
 
-.main {
+.site-nav__link--active {
   position: relative;
 }
 
-.main::after {
+.site-nav__link--active::after {
   content: '';
   position: absolute;
   left: 0;
@@ -102,11 +104,7 @@ p {
   border-radius: 2px;
 }
 
-.portfolio::after {
-  width: 78px;
-}
-
-.link {
+.site-nav__link {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -120,12 +118,12 @@ p {
   transition: color var(--duration) var(--timing-function);
 }
 
-.link:hover,
-.link:focus {
+.site-nav__link:hover,
+.site-nav__link:focus {
   color: var(--accent-color);
 }
 
-.link.item {
+.page-header__link {
   display: flex;
   align-items: center;
   padding: 0;
@@ -137,36 +135,23 @@ p {
   transition: color var(--duration) var(--timing-function);
 }
 
-.link.item:hover,
-.link.item:focus {
+.page-header__link:hover,
+.page-header__link:focus {
   color: var(--accent-color);
 }
 
-.icon-contacts {
+.page-header__icon {
   margin-right: 10px;
   fill: currentColor;
 }
 
 /* ----------------------СТУДИЯ (MAIN)------------------- */
-.banner-name {
-  margin-bottom: 30px;
-
-  color: var(--bgd-text-color);
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.4;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.banner {
+.poster {
   padding-top: 200px;
   padding-bottom: 200px;
   background-color: #2f303a;
   text-align: center;
-}
 
-.overlay {
   max-width: 1600px;
   min-height: 600px;
   margin-left: auto;
@@ -178,7 +163,18 @@ p {
   background-size: cover;
 }
 
-.ban-button {
+.poster__title {
+  margin-bottom: 30px;
+
+  color: var(--bgd-text-color);
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.4;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.poster__button {
   padding: 10px 32px;
   border: 1px solid transparent;
   border-radius: 4px;
@@ -193,13 +189,13 @@ p {
   transition: background-color var(--duration) var(--timing-function);
 }
 
-.ban-button:hover,
-.ban-button:focus {
+.poster__button:hover,
+.poster__button:focus {
   background-color: #188ce8;
 }
 
 /* ---------------------МОДАЛЬНОЕ ОКНО-------------------- */
-.backdrop {
+.dropdown {
   position: fixed;
   top: 0;
   left: 0;
@@ -213,18 +209,18 @@ p {
   z-index: 1;
 }
 
-.backdrop.is-hidden {
+.dropdown--is-hidden {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
 }
 
-.backdrop.is-hidden .modal {
+.dropdown .dropdown__container {
   transform: translate(-50%, -50%) scale(0.5);
   opacity: 0;
 }
 
-.modal {
+.dropdown__container {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -247,7 +243,7 @@ p {
   z-index: 2;
 }
 
-.modal-button {
+.dropdown__close {
   position: absolute;
   top: 8px;
   right: 8px;
@@ -264,23 +260,23 @@ p {
   cursor: pointer;
 }
 
-.modal-button:hover .modal-close,
-.modal-button:focus .modal-close {
+.dropdown__close:hover .dropdown__icon,
+.dropdown__close:focus .dropdown__icon {
   fill: var(--accent-color);
 }
 
-.modal-close {
+.dropdown__icon {
   transition: fill var(--duration) var(--timing-function);
 }
 
 /* -----------Форма модального окна-------------- */
-.modal-form {
+.dropdown__form {
   margin-left: auto;
   margin-right: auto;
   padding: 40px;
 }
 
-.modal-text {
+.dropdown__title {
   margin-bottom: 12px;
 
   font-weight: 700;
@@ -292,18 +288,14 @@ p {
   color: var(--primary-text-color);
 }
 
-.form-section {
+.dropdown__cell {
   position: relative;
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
 }
 
-.textarea {
-  margin: 0;
-}
-
-.form-section label {
+.dropdown__cell label {
   margin-bottom: 4px;
 
   font-weight: 400;
@@ -314,14 +306,14 @@ p {
   color: var(--secondary-text-color);
 }
 
-.form-section input {
+.dropdown__cell input {
   width: 100%;
   margin: 0;
   padding: 11px 12px;
   padding-left: 42px;
 }
 
-.modal-icon {
+.dropdown__icon {
   position: absolute;
   top: 50%;
   left: 12px;
@@ -329,7 +321,7 @@ p {
   transition: fill var(--duration) var(--timing-function);
 }
 
-.input {
+.dropdown__input {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   outline: var(--accent-color);
@@ -337,15 +329,15 @@ p {
   transition: border-color var(--duration) var(--timing-function);
 }
 
-.input:focus {
+.dropdown__input:focus {
   border-color: var(--accent-color);
 }
 
-.input:focus + .modal-icon {
+.dropdown__input:focus + .dropdown__icon {
   fill: var(--accent-color);
 }
 
-.form-section textarea {
+.dropdown__cell--textarea {
   margin: 0;
   padding: 12px 16px;
   font-family: inherit;
@@ -358,7 +350,7 @@ p {
   resize: none;
 }
 
-textarea::placeholder {
+.dropdown__cell--textarea::placeholder {
   font-weight: 400;
   font-size: 12px;
   line-height: 1.2;
@@ -366,13 +358,18 @@ textarea::placeholder {
   color: rgba(117, 117, 117, 0.5);
 }
 
-.agreement-section {
+.agreement {
   display: inline-block;
   margin-top: 20px;
   margin-bottom: 30px;
 }
 
-.agreement-section input {
+.agreement__label {
+  display: flex;
+  align-items: center;
+}
+
+.agreement__input {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -383,24 +380,6 @@ textarea::placeholder {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
-
-.agreement {
-  display: flex;
-  align-items: center;
-}
-
-.agreement span {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.7;
-  letter-spacing: 0.03em;
-  color: var(--secondary-text-color);
-}
-
-.agreement a {
-  text-decoration-line: underline;
-  color: var(--accent-color);
 }
 
 .agreement-icon {
@@ -421,12 +400,25 @@ textarea::placeholder {
     background-color var(--duration) var(--timing-function);
 }
 
-.checkbox:checked ~ .agreement-icon {
+.agreement__input:checked ~ .agreement-icon {
   border-color: transparent;
   background-color: var(--accent-color);
 }
 
-.send {
+.agreement__text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  color: var(--secondary-text-color);
+}
+
+.agreement__link {
+  text-decoration-line: underline;
+  color: var(--accent-color);
+}
+
+.dropdown__button {
   padding: 10px 55px;
 
   width: 200px;
@@ -438,7 +430,7 @@ textarea::placeholder {
   border-radius: 4px;
 }
 
-.send-text {
+.dropdown__send {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.9;
@@ -664,6 +656,10 @@ textarea::placeholder {
 }
 
 /* -----------------ПОРТФОЛИО (MAIN)--------------------- */
+.portfolio::after {
+  width: 78px;
+}
+
 a {
   text-decoration: none;
 }
