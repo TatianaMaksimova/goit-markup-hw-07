@@ -575,18 +575,16 @@ p {
 .teammate__card {
   padding: 30px 32px;
   background-color: var(--bgd-text-color);
+
+  font-size: 16px;
+  line-height: 1.2;
+  text-align: center;
 }
 
 .teammate__name {
   margin-bottom: 10px;
-}
 
-.teammate__name,
-.teammate__profession {
   font-weight: 500;
-  font-size: 16px;
-  line-height: 1.2;
-  text-align: center;
 }
 
 .teammate__profession {
@@ -618,7 +616,7 @@ p {
     color var(--duration) var(--timing-function);
 }
 
-.social__link .social__icon {
+.social__icon {
   fill: currentColor;
 }
 
@@ -994,4 +992,6 @@ a {
   text-align: center;
   letter-spacing: 0.06em;
   color: var(--bgd-text-color);
+
+  cursor: pointer;
 }
