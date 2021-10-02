@@ -68,7 +68,7 @@
         <div class="dropdown dropdown--is-hidden" data-modal>
           <div class="dropdown__container">
             <button class="dropdown__close" data-modal-close>
-              <svg class="dropdown__icon" width="16" height="18">
+              <svg class="dropdown__cross" width="16" height="18">
                 <use href="./images/icons.svg#close"></use>
               </svg>
             </button>
@@ -76,41 +76,41 @@
             <form class="dropdown__form" autocomplete="off">
               <p class="dropdown__title">Оставьте свои данные, мы вам перезвоним</p>
               <div class="dropdown__cell">
-                <label for="name">Имя</label>
+                <label class="dropdown__label" for="name">Имя</label>
                 <input class="dropdown__input" type="text" name="name" id="name" autofocus />
                 <svg class="dropdown__icon" width="18" height="18">
                   <use href="./images/icons.svg#person"></use>
                 </svg>
               </div>
               <div class="dropdown__cell">
-                <label for="tel">Телефон</label>
+                <label class="dropdown__label" for="tel">Телефон</label>
                 <input class="dropdown__input" type="tel" name="tel" id="tel" />
                 <svg class="dropdown__icon" width="18" height="18">
                   <use href="./images/icons.svg#phone"></use>
                 </svg>
               </div>
               <div class="dropdown__cell">
-                <label for="mail">Почта</label>
+                <label class="dropdown__label" for="mail">Почта</label>
                 <input class="dropdown__input" type="email" name="mail" id="mail" />
                 <svg class="dropdown__icon" width="18" height="18">
                   <use href="./images/icons.svg#email"></use>
                 </svg>
               </div>
               <div class="dropdown__cell dropdown__cell--textarea">
-                <label for="comment">Комментарий</label>
+                <label class="dropdown__label" for="comment">Комментарий</label>
                 <textarea
                   name="comment"
                   cols="30"
                   rows="10"
                   placeholder="Введите текст"
                   id="comment"
-                  class="input"
+                  class="dropdown__input dropdown__input--textarea"
                 ></textarea>
               </div>
 
               <div class="agreement">
                 <label class="agreement__label">
-                  <input type="checkbox" name="checkbox" class="agreement__input" />
+                  <input class="agreement__input" type="checkbox" name="checkbox" />
                   <span class="agreement__icon"></span>
                   <span class="agreement__text"
                     >Соглашаюсь с рассылкой и принимаю

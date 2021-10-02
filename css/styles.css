@@ -60,11 +60,6 @@ p {
   align-items: center;
 }
 
-.page-header__list {
-  display: flex;
-  margin-left: auto;
-}
-
 .site-nav__item:not(:last-child),
 .page-header__item:not(:last-child) {
   margin-right: 50px;
@@ -83,25 +78,8 @@ p {
   text-decoration: none;
 }
 
-.site-nav__accent,
-.site-nav__link--active {
+.site-nav__accent {
   color: var(--accent-color);
-}
-
-.site-nav__link--active {
-  position: relative;
-}
-
-.site-nav__link--active::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -1px;
-  display: block;
-  width: 48px;
-  height: 4px;
-  background-color: var(--accent-color);
-  border-radius: 2px;
 }
 
 .site-nav__link {
@@ -123,6 +101,34 @@ p {
   color: var(--accent-color);
 }
 
+.site-nav__link--active {
+  position: relative;
+
+  color: var(--accent-color);
+}
+
+.site-nav__link--active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  display: block;
+  width: 48px;
+  height: 4px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+}
+
+.page-header__list {
+  display: flex;
+  margin-left: auto;
+}
+
+.page-header__icon {
+  margin-right: 10px;
+  fill: currentColor;
+}
+
 .page-header__link {
   display: flex;
   align-items: center;
@@ -130,6 +136,11 @@ p {
   padding-top: 32px;
   padding-bottom: 32px;
   border: none;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  text-decoration: none;
   color: var(--secondary-text-color);
 
   transition: color var(--duration) var(--timing-function);
@@ -138,11 +149,6 @@ p {
 .page-header__link:hover,
 .page-header__link:focus {
   color: var(--accent-color);
-}
-
-.page-header__icon {
-  margin-right: 10px;
-  fill: currentColor;
 }
 
 /* ----------------------СТУДИЯ (MAIN)------------------- */
@@ -215,7 +221,7 @@ p {
   pointer-events: none;
 }
 
-.dropdown .dropdown__container {
+.dropdown--is-hidden .dropdown__container {
   transform: translate(-50%, -50%) scale(0.5);
   opacity: 0;
 }
@@ -260,12 +266,12 @@ p {
   cursor: pointer;
 }
 
-.dropdown__close:hover .dropdown__icon,
-.dropdown__close:focus .dropdown__icon {
+.dropdown__close:hover .dropdown__cross,
+.dropdown__close:focus .dropdown__cross {
   fill: var(--accent-color);
 }
 
-.dropdown__icon {
+.dropdown__cross {
   transition: fill var(--duration) var(--timing-function);
 }
 
@@ -295,7 +301,7 @@ p {
   margin-bottom: 10px;
 }
 
-.dropdown__cell label {
+.dropdown__label {
   margin-bottom: 4px;
 
   font-weight: 400;
@@ -306,22 +312,12 @@ p {
   color: var(--secondary-text-color);
 }
 
-.dropdown__cell input {
+.dropdown__input {
   width: 100%;
   margin: 0;
   padding: 11px 12px;
   padding-left: 42px;
-}
 
-.dropdown__icon {
-  position: absolute;
-  top: 50%;
-  left: 12px;
-
-  transition: fill var(--duration) var(--timing-function);
-}
-
-.dropdown__input {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   outline: var(--accent-color);
@@ -333,11 +329,19 @@ p {
   border-color: var(--accent-color);
 }
 
+.dropdown__icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+
+  transition: fill var(--duration) var(--timing-function);
+}
+
 .dropdown__input:focus + .dropdown__icon {
   fill: var(--accent-color);
 }
 
-.dropdown__cell--textarea {
+.dropdown__input--textarea {
   margin: 0;
   padding: 12px 16px;
   font-family: inherit;
@@ -350,7 +354,7 @@ p {
   resize: none;
 }
 
-.dropdown__cell--textarea::placeholder {
+.dropdown__input--textarea::placeholder {
   font-weight: 400;
   font-size: 12px;
   line-height: 1.2;
@@ -382,7 +386,7 @@ p {
   overflow: hidden;
 }
 
-.agreement-icon {
+.agreement__icon {
   display: inline-block;
   width: 15px;
   height: 15px;
@@ -400,7 +404,7 @@ p {
     background-color var(--duration) var(--timing-function);
 }
 
-.agreement__input:checked ~ .agreement-icon {
+.agreement__input:checked ~ .agreement__icon {
   border-color: transparent;
   background-color: var(--accent-color);
 }
@@ -428,6 +432,8 @@ p {
   border: 1px solid transparent;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+
+  cursor: pointer;
 }
 
 .dropdown__send {
