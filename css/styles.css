@@ -594,13 +594,13 @@ p {
   font-weight: 400;
 }
 
-.social {
+.social-list {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.social__link {
+.social-list__link {
   display: flex;
   padding: 0;
   border: none;
@@ -616,12 +616,12 @@ p {
     color var(--duration) var(--timing-function);
 }
 
-.social__icon {
+.social-list__icon {
   fill: currentColor;
 }
 
-.social__link:hover,
-.social__link:focus {
+.social-list__link:hover,
+.social-list__link:focus {
   background-color: var(--accent-color);
   color: var(--bgd-text-color);
 }
