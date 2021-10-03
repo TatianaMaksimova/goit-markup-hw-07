@@ -9,18 +9,13 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
-    />
-    <!-- <link rel="stylesheet" href="./css/main.min.css" /> -->
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
   </head>
 
   <body>
-    <header class="page-header">
+    <header class="page-header page-header--border">
       <div class="container page-header__container">
-        <nav class="site-nav">
+        <nav class="site-nav page-header__site-nav">
           <a href="#" class="site-nav__logo"><span class="site-nav__accent">Web</span>Studio</a>
           <ul class="site-nav__list">
             <li class="site-nav__item">
@@ -55,7 +50,7 @@
 
     <main>
       <!-- Эффективные решения для вашего бизнеса -->
-      <section class="poster">
+      <section class="poster poster--geometry">
         <div class="container">
           <h1 class="poster__title">
             Эффективные решения<br />
@@ -65,7 +60,7 @@
         </div>
 
         <!-- Модальное окно по кнопке "Заказать услугу". -->
-        <div class="dropdown dropdown--is-hidden" data-modal>
+        <div class="dropdown dropdown--geometry dropdown--is-hidden" data-modal>
           <div class="dropdown__container">
             <button class="dropdown__close" data-modal-close>
               <svg class="dropdown__cross" width="16" height="18">
@@ -108,7 +103,7 @@
                 ></textarea>
               </div>
 
-              <div class="agreement">
+              <div class="agreement agreement--geometry">
                 <label class="agreement__label">
                   <input class="agreement__input" type="checkbox" name="checkbox" />
                   <span class="agreement__icon"></span>
@@ -179,7 +174,7 @@
         </div>
       </section>
       <!-- Чем мы занимаемся -->
-      <section class="suggestions section">
+      <section class="suggestions suggestions--geometry section">
         <div class="container">
           <h2 class="suggestions__title">Чем мы занимаемся</h2>
           <ul class="suggestions__list">
@@ -431,7 +426,7 @@
       </section>
     </main>
 
-    <footer class="page-footer">
+    <footer class="page-footer page-footer--geometry">
       <div class="page-footer__container container">
         <div class="page-footer__card">
           <a href="#" class="page-footer__logo"
@@ -450,7 +445,7 @@
           </address>
         </div>
         <!-- Присоединяйтесь! -->
-        <div class="attach">
+        <div class="attach attach--geometry">
           <h2 class="attach__title">присоединяйтесь</h2>
           <ul class="attach__list">
             <li class="attach__item">
@@ -484,7 +479,7 @@
           </ul>
         </div>
         <!-- Форма для рассылки -->
-        <form class="footer-form">
+        <form class="footer-form footer-form--geometry">
           <label>
             <span class="footer-form__title">Подпишитесь на рассылку</span>
             <input class="footer-form__input" type="email" name="mail" placeholder="E-mail" />

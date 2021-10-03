@@ -53,12 +53,12 @@ a {
 }
 
 /* -----------------------HEADER------------------------ */
-.page-header {
+.page-header--border {
   border-bottom: 1px solid #ececec;
 }
 
 .page-header__container,
-.site-nav,
+.page-header__site-nav,
 .site-nav__list {
   display: flex;
   align-items: center;
@@ -210,7 +210,7 @@ a {
 }
 
 /* ---------------------МОДАЛЬНОЕ ОКНО-------------------- */
-.dropdown {
+.dropdown--geometry {
   position: fixed;
   top: 0;
   left: 0;
@@ -513,7 +513,7 @@ a {
 }
 
 /* --------------------ЧЕМ МЫ ЗАНИМАЕМСЯ---------------- */
-.suggestions {
+.suggestions--geometry {
   padding-top: 0;
 }
 
@@ -811,7 +811,7 @@ a {
 }
 
 /* ----------------------ФУТЕР---------------------- */
-.page-footer {
+.page-footer--geometry {
   padding-top: 60px;
   padding-bottom: 60px;
 
@@ -873,7 +873,7 @@ a {
 }
 
 /* Присоединяйтесь */
-.attach {
+.attach--geometry {
   margin-right: 93px;
 }
 
@@ -927,7 +927,7 @@ a {
 }
 
 /* ------------------------Форма---------------------- */
-.footer-form {
+.footer-form--geometry {
   display: flex;
   align-items: flex-end;
 }

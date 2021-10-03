@@ -1,0 +1,60 @@
+.suggestions--geometry {
+  padding-top: 0;
+}
+
+.suggestions {
+  &__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  &__overlay {
+    background-color: rgba(47, 48, 58, 0.8);
+  }
+
+  &__text {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    color: $bgd-text-color;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+}
+
+.suggestions__title {
+  margin-bottom: 50px;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.suggestions__list {
+  display: flex;
+}
+
+.suggestions__item {
+  position: relative;
+  width: 370px;
+}
+
+.suggestions__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.suggestions__overlay {
+  position: absolute;
+  bottom: 0;
+  width: 370px;
+  height: 70px;
+}
+
+.suggestions__text {
+  padding-top: 27px;
+  padding-bottom: 27px;
+}
