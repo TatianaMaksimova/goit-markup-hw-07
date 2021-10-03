@@ -40,12 +40,13 @@
   padding-top: 32px;
   padding-bottom: 32px;
 
-  color: $primary-text-color;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
+  letter-spacing: 0.02em;
   text-decoration: none;
 
+  color: $primary-text-color;
   transition: color $duration $timing-function;
 
   &:hover,
