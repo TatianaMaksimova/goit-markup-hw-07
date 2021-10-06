@@ -2,10 +2,7 @@
   background-color: #f5f4fa;
 
   &__title {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.2;
-    text-align: center;
+    @extend %title;
   }
 
   &__item {
@@ -16,7 +13,7 @@
   &__card {
     background-color: $bgd-text-color;
     font-size: 16px;
-    line-height: 1.2;
+    line-height: $lineHeight;
     text-align: center;
   }
 
@@ -26,7 +23,7 @@
 
   &__profession {
     color: $secondary-text-color;
-    font-weight: 400;
+    font-weight: $fontWeight;
   }
 }
 
@@ -68,9 +65,7 @@
 }
 
 .social-list__link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include centeredFlex();
   padding: 0;
 
   width: 44px;

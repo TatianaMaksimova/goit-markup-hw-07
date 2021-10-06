@@ -1,9 +1,6 @@
 .customers {
   &__title {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.2;
-    text-align: center;
+    @extend %title;
   }
 }
 
@@ -31,9 +28,7 @@
 }
 
 .customers__link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include centeredFlex();
   width: 170px;
   height: 92px;
   border: 1px solid $icon-primary-color;

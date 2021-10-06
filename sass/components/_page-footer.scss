@@ -8,9 +8,9 @@
   color: $bgd-text-color;
 
   &__logo {
-    font-family: Raleway, sans-serif;
+    font-family: $fontFamily;
     font-size: 26px;
-    line-height: 1.2;
+    line-height: $lineHeight;
     text-decoration: none;
     color: $bgd-text-color;
   }
@@ -21,10 +21,10 @@
 
   &__address,
   &__link {
-    font-weight: 400;
-    font-size: 14px;
+    font-weight: $fontWeight;
+    font-size: $fontSize;
     line-height: 1.7;
-    font-style: normal;
+    font-style: $fontStyle;
     text-decoration: none;
   }
 }
@@ -69,10 +69,10 @@
 .attach {
   &__title {
     font-weight: 700;
-    font-size: 14px;
+    font-size: $fontSize;
     line-height: 1.14;
     text-transform: uppercase;
-    letter-spacing: 0.03em;
+    letter-spacing: $letterSpace;
   }
 }
 
@@ -93,7 +93,7 @@
 }
 
 .attach__link {
-  display: flex;
+  @include centeredFlex();
   padding: 0;
   border: none;
   width: 44px;
@@ -101,8 +101,6 @@
   color: $bgd-text-color;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
-  justify-content: center;
-  align-items: center;
 
   transition: color $duration $timing-function, background-color $duration $timing-function;
 
@@ -148,17 +146,17 @@
 .footer-form {
   &__title {
     font-weight: 700;
-    font-size: 14px;
+    font-size: $fontSize;
     line-height: 1.14;
-    letter-spacing: 0.03em;
+    letter-spacing: $letterSpace;
     text-transform: uppercase;
     color: $bgd-text-color;
   }
   &__input::placeholder {
-    font-weight: 400;
+    font-weight: $fontWeight;
     font-size: 16px;
     line-height: 1.3;
-    letter-spacing: 0.03em;
+    letter-spacing: $letterSpace;
     color: rgba(255, 255, 255, 0.6);
   }
   &__button {
@@ -183,10 +181,7 @@
 }
 
 .footer-form__button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
+  @include centeredFlex(inline-flex);
   width: 200px;
   height: 50px;
   border: 2px solid transparent;

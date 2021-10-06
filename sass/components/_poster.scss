@@ -91,16 +91,16 @@
   &__title {
     font-weight: 700;
     font-size: 20px;
-    line-height: 1.2;
+    line-height: $lineHeight;
     text-align: center;
-    letter-spacing: 0.03em;
+    letter-spacing: $letterSpace;
     color: $primary-text-color;
   }
 
   &__label {
-    font-weight: 400;
+    font-weight: $fontWeight;
     font-size: 12px;
-    line-height: 1.2;
+    line-height: $lineHeight;
     letter-spacing: 0.01em;
     text-align: start;
     color: $secondary-text-color;
@@ -227,19 +227,19 @@
 }
 
 .dropdown__input--textarea::placeholder {
-  font-weight: 400;
+  font-weight: $fontWeight;
   font-size: 12px;
-  line-height: 1.2;
+  line-height: $lineHeight;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
 
 .agreement {
   &__text {
-    font-weight: 400;
-    font-size: 14px;
+    font-weight: $fontWeight;
+    font-size: $fontSize;
     line-height: 1.7;
-    letter-spacing: 0.03em;
+    letter-spacing: $letterSpace;
     color: $secondary-text-color;
   }
 

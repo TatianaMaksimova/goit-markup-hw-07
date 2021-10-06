@@ -4,10 +4,7 @@
 
 .suggestions {
   &__title {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.2;
-    text-align: center;
+    @extend %title;
   }
 
   &__overlay {
@@ -16,22 +13,17 @@
 
   &__text {
     font-weight: 700;
-    font-size: 14px;
+    font-size: $fontSize;
     line-height: 1.14;
     text-align: center;
     color: $bgd-text-color;
-    letter-spacing: 0.03em;
+    letter-spacing: $letterSpace;
     text-transform: uppercase;
   }
 }
 
 .suggestions__title {
   margin-bottom: 50px;
-
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.2;
-  text-align: center;
 }
 
 .suggestions__list {

@@ -78,11 +78,11 @@
 
 .portfolio {
   &__text {
-    font-style: normal;
-    font-weight: 400;
+    font-style: $fontStyle;
+    font-weight: $fontWeight;
     font-size: 18px;
     line-height: 1.6;
-    letter-spacing: 0.03em;
+    letter-spacing: $letterSpace;
     color: $bgd-text-color;
 
     transition: color $duration $timing-function;
@@ -96,7 +96,7 @@
   &__filter-text {
     color: $secondary-text-color;
     font-size: 16px;
-    line-height: 30px;
+    line-height: 2;
   }
 }
 

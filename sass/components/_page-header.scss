@@ -17,9 +17,9 @@
 .site-nav {
   &__logo {
     color: #000000;
-    font-family: Raleway, sans-serif;
+    font-family: $fontFamily;
     font-size: 26px;
-    line-height: 1.2;
+    line-height: $lineHeight;
     text-decoration: none;
   }
 
@@ -41,7 +41,7 @@
   padding-bottom: 32px;
 
   font-weight: 500;
-  font-size: 14px;
+  font-size: $fontSize;
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
@@ -63,7 +63,7 @@
     content: '';
     position: absolute;
     left: 0;
-    bottom: -1px;
+    bottom: -1.5px;
     display: block;
     width: 48px;
     height: 4px;
@@ -99,7 +99,7 @@
 .page-header {
   &__link {
     font-weight: 500;
-    font-size: 14px;
+    font-size: $fontSize;
     line-height: 1.14;
     text-decoration: none;
     color: $secondary-text-color;

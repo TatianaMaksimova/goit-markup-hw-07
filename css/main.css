@@ -13,6 +13,13 @@
   overflow: hidden;
 }
 
+.suggestions__title, .teammate__title, .customers__title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.2;
+  text-align: center;
+}
+
 /*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 /*
 Document
@@ -385,7 +392,7 @@ a {
   content: '';
   position: absolute;
   left: 0;
-  bottom: -1px;
+  bottom: -1.5px;
   display: block;
   width: 48px;
   height: 4px;
@@ -796,26 +803,26 @@ a {
 
 .advantages__text {
   font-weight: 400;
-  color: #757575;
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;
+  color: #757575;
 }
 
 .advantages__icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 270px;
-  height: 120px;
-  border-radius: 4px;
-  margin-bottom: 30px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 270px;
+  height: 120px;
+  border-radius: 4px;
+  margin-bottom: 30px;
 }
 
 .advantages__title {
@@ -824,13 +831,6 @@ a {
 
 .suggestions--geometry {
   padding-top: 0;
-}
-
-.suggestions__title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.2;
-  text-align: center;
 }
 
 .suggestions__overlay {
@@ -849,10 +849,6 @@ a {
 
 .suggestions__title {
   margin-bottom: 50px;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.2;
-  text-align: center;
 }
 
 .suggestions__list {
@@ -884,13 +880,6 @@ a {
 
 .teammate {
   background-color: #f5f4fa;
-}
-
-.teammate__title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.2;
-  text-align: center;
 }
 
 .teammate__item {
@@ -990,13 +979,6 @@ a {
 
 .social-list__icon {
   fill: currentColor;
-}
-
-.customers__title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.2;
-  text-align: center;
 }
 
 .customers__title {
@@ -1145,6 +1127,12 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 0;
   border: none;
   width: 44px;
@@ -1152,12 +1140,6 @@ a {
   color: #ffffff;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -1270,12 +1252,12 @@ a {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 200px;
   height: 50px;
   border: 2px solid transparent;

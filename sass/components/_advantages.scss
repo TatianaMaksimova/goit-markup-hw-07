@@ -17,28 +17,26 @@
 
   &__title {
     font-weight: 700;
-    font-size: 14px;
+    font-size: $fontSize;
     line-height: 1.14;
     text-transform: uppercase;
   }
 
   &__text {
-    font-weight: 400;
-    color: $secondary-text-color;
-    font-size: 14px;
+    font-weight: $fontWeight;
+    font-size: $fontSize;
     line-height: 1.7;
-    letter-spacing: 0.03em;
+    letter-spacing: $letterSpace;
+    color: $secondary-text-color;
   }
 }
 
 .advantages__icon {
-  display: flex;
+  @include centeredFlex();
   width: 270px;
   height: 120px;
   border-radius: 4px;
   margin-bottom: 30px;
-  justify-content: center;
-  align-items: center;
 }
 
 .advantages__title {
